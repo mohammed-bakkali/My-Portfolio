@@ -254,29 +254,29 @@ document.addEventListener("mouseup", dragStop);
 /*~~~~~~~~~~~~~~~ END SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
-  duration: 1500,
-  delay: 400,
-});
+// const sr = ScrollReveal({
+//   origin: "top",
+//   distance: "60px",
+//   duration: 1500,
+//   delay: 400,
+// });
 
-sr.reveal(".home__image");
-sr.reveal(".text", { origin: "bottom" });
+// sr.reveal(".home__image");
+// sr.reveal(".text", { origin: "bottom" });
 
-sr.reveal(".category__box", { interval: 300 });
+// sr.reveal(".category__box", { interval: 300 });
 
-sr.reveal(".about__img", { origin: "bottom" });
-sr.reveal(".about__content", { origin: "top" });
+// sr.reveal(".about__img", { origin: "bottom" });
+// sr.reveal(".about__content", { origin: "top" });
 
-sr.reveal(".customer__review", { origin: "right" });
+// sr.reveal(".customer__review", { origin: "right" });
 
-sr.reveal(".articles__boxes", { origin: "left" });
+// sr.reveal(".articles__boxes", { origin: "left" });
 
-sr.reveal(".contact-text", { origin: "left" });
+// sr.reveal(".contact-text", { origin: "left" });
 
-sr.reveal(".contact-from", { origin: "lright" });
+// sr.reveal(".contact-from", { origin: "lright" });
 
-sr.reveal(".footer");
+// sr.reveal(".footer");
 
 /*~~~~~~~~~~~~~~~  ENdSCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
