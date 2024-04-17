@@ -46,8 +46,6 @@ html {
 
 body {
   font-family: "Cairo", sans-serif;
-  height: 100vh;
-  background-color: var(--bg-color);
 }
 
 a {
@@ -176,7 +174,7 @@ li {
   top: 0;
   background-color: var(--bg-color);
   width: 200px;
-  z-index: 1000;
+  z-index: 1010;
   min-height: 100vh;
   transition: 0.3s;
   border: 1px solid #eee;
@@ -400,6 +398,11 @@ li {
   top: 50%;
   transform: translateY(-50%);
 }
+@media (min-width: 360px) {
+  .landing .container .text {
+    top: 56%;
+  }
+}
 
 .landing .text h4 {
   color: white;
@@ -504,6 +507,11 @@ li {
   bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
+}
+@media (min-width: 360px) {
+  .landing .go-down {
+    bottom: 0;
+  }
 }
 
 .landing .go-down i {
@@ -661,6 +669,7 @@ li {
 .skills {
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padiing-bottom);
+  background-color: var(--bg-color);
 }
 
 .skills .skills-container {
