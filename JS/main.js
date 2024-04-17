@@ -145,6 +145,7 @@ ourGallery.forEach((img) => {
 
     // Append Overlay To The Body
     document.body.appendChild(overlay);
+    
 
     // Create The Popup Box
     let popupBox = document.createElement("div");
@@ -254,29 +255,35 @@ document.addEventListener("mouseup", dragStop);
 /*~~~~~~~~~~~~~~~ END SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
-// const sr = ScrollReveal({
-//   origin: "top",
-//   distance: "60px",
-//   duration: 1500,
-//   delay: 400,
-// });
+const screenWidth = window.innerWidth;
 
-// sr.reveal(".home__image");
-// sr.reveal(".text", { origin: "bottom" });
+let distanceValue;
 
-// sr.reveal(".category__box", { interval: 300 });
+if (screenWidth <= 768) {
+  // If screen width is less than or equal to 768 pixels (e.g., for mobile devices)
+  distanceValue = "20px";
+} else {
+  // For larger screens (e.g., desktops, tablets)
+  distanceValue = "60px";
+}
 
-// sr.reveal(".about__img", { origin: "bottom" });
-// sr.reveal(".about__content", { origin: "top" });
+const sr = ScrollReveal({
+  origin: "top",
+  distance: distanceValue,
+  duration: 1500,
+  delay: 400,
+});
 
-// sr.reveal(".customer__review", { origin: "right" });
+sr.reveal(".home__image");
+sr.reveal(".text", { origin: "bottom" });
+sr.reveal(".category__box", { interval: 300 });
+sr.reveal(".about__img", { origin: "bottom" });
+sr.reveal(".about__content", { origin: "top" });
+sr.reveal(".customer__review", { origin: "right" });
+sr.reveal(".articles__boxes", { origin: "left" });
+sr.reveal(".contact-text", { origin: "left" });
+sr.reveal(".contact-form", { origin: "right" });
+sr.reveal(".footer");
 
-// sr.reveal(".articles__boxes", { origin: "left" });
-
-// sr.reveal(".contact-text", { origin: "left" });
-
-// sr.reveal(".contact-from", { origin: "lright" });
-
-// sr.reveal(".footer");
 
 /*~~~~~~~~~~~~~~~  ENdSCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
