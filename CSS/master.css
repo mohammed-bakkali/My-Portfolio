@@ -508,15 +508,15 @@ li {
   left: 50%;
   transform: translateX(-50%);
 }
-@media (min-width: 360px) {
+/* @media (min-width: 360px) {
   .landing .go-down {
     bottom: 0;
   }
-}
+} */
 
 .landing .go-down i {
-  animation: bouncing 5s infinite;
-  -webkit-animation: bouncing 5s infinite;
+  animation: bouncing 1.5s infinite;
+  -webkit-animation: bouncing 1.5s infinite;
 }
 
 /* End Landing */
