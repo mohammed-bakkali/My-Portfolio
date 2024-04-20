@@ -26,7 +26,7 @@
   -webkit-box-sizing: border-box;
   -moz-sizinig: border-box;
   box-sizing: border-box;
-  scrollbar-color: #7e7e7e #494949;
+  scrollbar-color: var(--main-color) black;
   margin: 0;
   padding: 0;
 }
@@ -534,7 +534,6 @@ li {
 @media (max-width: 991px) {
   .about .about-container {
     flex-direction: column;
-    text-align: center;
   }
 }
 
@@ -562,7 +561,9 @@ li {
   margin-bottom: 30px;
   color: #777;
   line-height: 35px;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  font-family: "HCo Operator Mono";
+  letter-spacing: 1px;
 }
 
 .about .container .about-gri {
