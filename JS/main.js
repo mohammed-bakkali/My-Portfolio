@@ -272,11 +272,11 @@ const sr = ScrollReveal({
   duration: 3000,
   delay: 400,
 });
-sr.reveal(".logo", { origin: "left" });
-sr.reveal(".main-nav", { origin: "right" });
+// sr.reveal(".logo", { origin: "left" });
+// sr.reveal(".main-nav", { origin: "right" });
 sr.reveal(".home__image");
 sr.reveal(".text", { origin: "bottom" });
-sr.reveal(".category__box", { interval: 300 });
+sr.reveal(".filterable_cards", { interval: 300 });
 sr.reveal(".about__img", { origin: "bottom" });
 sr.reveal(".about__content", { origin: "top" });
 sr.reveal(".customer__review", { origin: "right" });
