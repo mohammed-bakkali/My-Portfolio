@@ -271,7 +271,7 @@ const sr = ScrollReveal({
   origin: "top",
   distance: distanceValue,
   duration: 1500,
-  delay: 400,
+  delay: 300,
 });
 
 sr.reveal(".home__image");
