@@ -65,7 +65,7 @@ window.onscroll = function () {
   }
 
   if (window.scrollY >= 1) {
-    header.style.background = "#12141c";
+    header.style.background = "#161718";
   } else {
     // Reset the style if needed when scrolling back up
     header.style.background = ""; // Resetting the background to its default state
