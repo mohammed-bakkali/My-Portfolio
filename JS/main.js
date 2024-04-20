@@ -266,14 +266,14 @@ if (screenWidth <= 768) {
   // For larger screens (e.g., desktops, tablets)
   distanceValue = "60px";
 }
-
 const sr = ScrollReveal({
   origin: "top",
   distance: distanceValue,
-  duration: 1500,
-  delay: 300,
+  duration: 3000,
+  delay: 400,
 });
-
+sr.reveal(".logo", { origin: "left" });
+sr.reveal(".main-nav", { origin: "right" });
 sr.reveal(".home__image");
 sr.reveal(".text", { origin: "bottom" });
 sr.reveal(".category__box", { interval: 300 });
