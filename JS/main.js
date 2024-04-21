@@ -262,9 +262,8 @@ let distanceValue;
 if (screenWidth <= 768) {
   // If screen width is less than or equal to 768 pixels (e.g., for mobile devices)
   distanceValue = "10px"; // Adjusted distance value for smaller screens
-} else if (screenWidth <= 359) {
-  distanceValue = "0px"; // Adjusted distance value for very small screens
-} else {
+}  // Adjusted distance value for very small screens
+ else {
   // For larger screens (e.g., desktops, tablets)
   distanceValue = "60px";
 }
@@ -278,7 +277,7 @@ const sr = ScrollReveal({
 
 sr.reveal(".home__image");
 sr.reveal(".text", { origin: "bottom" });
-sr.reveal(".category__box", { interval: 300 });
+sr.reveal(".projects-container", { origin: "left" });
 sr.reveal(".about__img", { origin: "bottom" });
 sr.reveal(".about__content", { origin: "top" });
 sr.reveal(".customer__review", { origin: "right" });
