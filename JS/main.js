@@ -255,36 +255,37 @@ document.addEventListener("mouseup", dragStop);
 /*~~~~~~~~~~~~~~~ END SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
-const screenWidth = window.innerWidth;
+// const screenWidth = window.innerWidth;
 
-let distanceValue;
+// let distanceValue;
 
-if (screenWidth <= 768) {
-  // If screen width is less than or equal to 768 pixels (e.g., for mobile devices)
-  distanceValue = "10px"; // Adjusted distance value for smaller screens
-}  // Adjusted distance value for very small screens
- else {
-  // For larger screens (e.g., desktops, tablets)
-  distanceValue = "60px";
-}
+// if (screenWidth <= 768) {
+//   // If screen width is less than or equal to 768 pixels (e.g., for mobile devices)
+//   distanceValue = "10px"; // Adjusted distance value for smaller screens
+// }  // Adjusted distance value for very small screens
+//  else {
+//   // For larger screens (e.g., desktops, tablets)
+//   distanceValue = "60px";
+// }
 
-const sr = ScrollReveal({
-  origin: "top",
-  distance: distanceValue,
-  duration: 1500,
-  delay: 400,
-});
+// const sr = ScrollReveal({
+//   origin: "top",
+//   distance: distanceValue,
+//   duration: 1500,
+//   delay: 400,
+// });
 
-sr.reveal(".home__image");
-sr.reveal(".text", { origin: "bottom" });
-sr.reveal(".projects-container", { origin: "left" });
-sr.reveal(".about__img", { origin: "bottom" });
-sr.reveal(".about__content", { origin: "top" });
-sr.reveal(".customer__review", { origin: "right" });
-sr.reveal(".articles__boxes", { origin: "left" });
-sr.reveal(".contact-text", { origin: "left" });
-sr.reveal(".contact-form", { origin: "right" });
-sr.reveal(".footer");
+// sr.reveal(".home__image");
+// sr.reveal(".text", { origin: "bottom" });
+// sr.reveal(".projects-container", { origin: "left" });
+// sr.reveal(".about__img", { origin: "bottom" });
+// sr.reveal(".about__content", { origin: "top" });
+// sr.reveal(".customer__review", { origin: "right" });
+// sr.reveal(".articles__boxes", { origin: "left" });
+// sr.reveal(".contact-text", { origin: "left" }); 
+
+// sr.reveal(".contact-form", { origin: "right" });
+// sr.reveal(".footer");
 
 
 /*~~~~~~~~~~~~~~~  ENdSCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
