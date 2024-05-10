@@ -145,7 +145,6 @@ ourGallery.forEach((img) => {
 
     // Append Overlay To The Body
     document.body.appendChild(overlay);
-    
 
     // Create The Popup Box
     let popupBox = document.createElement("div");
@@ -251,7 +250,6 @@ carousel.addEventListener("mousedown", dragStart);
 carousel.addEventListener("mousemove", dragging);
 document.addEventListener("mouseup", dragStop);
 
-
 /*~~~~~~~~~~~~~~~ END SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
@@ -282,10 +280,9 @@ document.addEventListener("mouseup", dragStop);
 // sr.reveal(".about__content", { origin: "top" });
 // sr.reveal(".customer__review", { origin: "right" });
 // sr.reveal(".articles__boxes", { origin: "left" });
-// sr.reveal(".contact-text", { origin: "left" }); 
+// sr.reveal(".contact-text", { origin: "left" });
 
 // sr.reveal(".contact-form", { origin: "right" });
 // sr.reveal(".footer");
-
 
 /*~~~~~~~~~~~~~~~  ENdSCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
