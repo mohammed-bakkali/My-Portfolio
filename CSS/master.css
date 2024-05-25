@@ -723,8 +723,11 @@ li {
   box-shadow: 0 0 20px hsl(186.79deg 100% 41.57%);
 }
 
-.skills .skills-container.box.laravel:hover {
-  box-shadow: 0 0 20px hsl(355.76deg 85.86% 61.18%);
+.skills .skills-container .box.node:hover {
+  box-shadow: 0 0 20px #80bd00;
+}
+.skills .skills-container .box.MongoDB:hover {
+  box-shadow: 0 0 20px #80bd00;
 }
 
 .skills .skills-container .box.linux:hover {

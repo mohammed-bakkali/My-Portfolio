@@ -253,9 +253,9 @@ document.addEventListener("mouseup", dragStop);
 /*~~~~~~~~~~~~~~~ END SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
-// const screenWidth = window.innerWidth;
+const screenWidth = window.innerWidth;
 
-// let distanceValue;
+let distanceValue;
 
 if (screenWidth <= 768) {
   // If screen width is less than or equal to 768 pixels (e.g., for mobile devices)
@@ -274,15 +274,24 @@ const sr = ScrollReveal({
 });
 
 sr.reveal(".home__image");
+
 sr.reveal(".text", { origin: "bottom" });
+
+sr.reveal(".category__box", { interval: 300 });
+
 sr.reveal(".projects-container", { origin: "left" });
+
 sr.reveal(".about__img", { origin: "bottom" });
+
 sr.reveal(".about__content", { origin: "top" });
+
 sr.reveal(".customer__review", { origin: "right" });
+
 sr.reveal(".articles__boxes", { origin: "left" });
+
 sr.reveal(".contact-text", { origin: "left" });
 
 sr.reveal(".contact-form", { origin: "right" });
-// sr.reveal(".footer");
+sr.reveal(".footer");
 
 /*~~~~~~~~~~~~~~~  ENdSCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
