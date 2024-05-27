@@ -1,7 +1,7 @@
 /* Start Global Rules */
 .landing {
-  background: url(../images/photo-1514790193030-c89d266d5a9d.jpeg) no-repeat center
-    center fixed;
+  background: url(../images/photo-1514790193030-c89d266d5a9d.jpeg) no-repeat
+    center center fixed;
   background-size: cover;
 }
 
@@ -30,7 +30,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 @media (max-width: 830px) {
   :root {
@@ -400,7 +399,6 @@ li {
   transform: translateY(-50%);
 }
 
-
 .landing .text h4 {
   color: white;
   font-size: 18px;
@@ -494,7 +492,7 @@ li {
   background: transparent;
 }
 
-.landing .textzzz i {
+.landing .text i {
   margin-right: 2px;
 }
 
@@ -517,6 +515,43 @@ li {
 }
 
 /* End Landing */
+/* Start Stats */
+.stats {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padiing-bottom);
+  color: white;
+}
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  align-items: center;
+  gap: 1rem;
+}
+.stats .box {
+  background-color: #171717 ;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 6px;
+  transition: var(--main-transition);
+}
+.stats .box:hover {
+  transform: scale(1.01) translateY(-10px);
+}
+.stats .container .number {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.stats .container .text {
+  color: var(--main-color);
+  font-style: italic;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* End Stats */
 /* Start About */
 .about {
   padding-top: var(--main-padding-top);
@@ -807,7 +842,6 @@ li {
 
 .projects .card img {
   width: 100%;
-  
 }
 
 .projects .card h3 {
@@ -955,7 +989,7 @@ li {
   display: none;
 }
 .carousel.dragging {
-  scroll-snap-type: none; 
+  scroll-snap-type: none;
   scroll-behavior: auto;
 }
 @media screen and (max-width: 930px) {
@@ -980,7 +1014,6 @@ li {
   user-select: none;
 }
 
-
 .reviews .reviews-container .box:hover {
   transform: scale(1.01) translateY(-5px);
   color: var(--text-color);
@@ -1000,7 +1033,6 @@ li {
   display: flex;
   align-items: center;
   margin-top: 23px;
-
 }
 
 .reviews .reviews-container .box-footer .info {
@@ -1215,7 +1247,6 @@ form textarea {
   border-color: var(--main-color);
 }
 
-
 textarea:focus {
   border-color: var(--main-color);
 }
@@ -1296,7 +1327,6 @@ form .btn {
   font-weight: 700;
   padding: 25px 0;
   margin: 0;
-
 }
 .footer .Reserved span {
   color: red;
