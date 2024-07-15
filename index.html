@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,58 +9,50 @@
     <!-- Page Title -->
     <title>PORTFLIO</title>
 
-    <!-- CSS Stylesheets -->
-    <!-- Normalize.css for consistent browser rendering -->
+    <!-- Inline Critical CSS -->
+    <style>
+        /* Insérez ici le CSS critique pour le rendu initial de la page */
+    </style>
 
-    <!-- Master Stylesheet for global styles -->
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./CSS/master.css" />
+
     <!-- Font Awesome Library from CDN for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
 
     <!-- Google Fonts for custom fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900&display=swap" /></noscript>
+
     <!-- ALERTIFY JS -->
     <!-- JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"
-    />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" /></noscript>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="path/to/favicon.ico" type="image/x-icon" />
 
     <!-- JavaScript Libraries -->
     <!-- Particles.js Library for particle effects -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <!-- Stats.js Library for performance monitoring -->
-    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script defer src="https://threejs.org/examples/js/libs/stats.min.js"></script>
 
-    <!-- EmailJS  Library for sending emails -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
-    <script type="text/javascript">
-      (function () {
-        emailjs.init({
-          publicKey: "PxT3bopGK67Wcy0Ha",
-        });
-      })();
+    <!-- EmailJS Library for sending emails -->
+    <script defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script defer type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "PxT3bopGK67Wcy0Ha",
+            });
+        })();
     </script>
-  </head>
+</head>
 
   <body>
     <!-- Icon  WhatsApp button -->
@@ -133,27 +125,49 @@
           <h1 class="">I' M <span>Mohammed</span><br />Bk<span>kali</span></h1>
           <h3>Web Developer | Freelancer</h3>
           <div class="contact-icons">
-            <a
-              target="_blank"
+            <a 
+              target="_blank" 
               href="https://www.linkedin.com/in/mohammed-bakkali-4821a123a/"
-              ><i class="fa-brands fa-linkedin"></i
-            ></a>
-            <a target="_blank" href="https://github.com/mohammed-bakkali"
-              ><i class="fa-brands fa-github"></i
-            ></a>
-            <a target="_blank" href="https://twitter.com/Mohamme52469572"
-              ><i class="fa-brands fa-twitter"></i
-            ></a>
-            <a target="_blank" href="https://www.instagram.com/mohammed_bk45/">
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            
+            <a 
+              target="_blank" 
+              href="https://github.com/mohammed-bakkali"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            
+            <a 
+              target="_blank" 
+              href="https://twitter.com/Mohamme52469572"
+            >
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            
+            <a 
+              target="_blank" 
+              href="https://www.instagram.com/mohammed_bk45/"
+            >
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a
-              target="_blank"
+            
+            <a 
+              target="_blank" 
               href="https://www.upwork.com/freelancers/~01ac9630508b53f681?s=1110580755057594368"
             >
               <i class="fab fa-upwork"></i>
             </a>
+            
+            <!-- <a 
+              target="_blank" 
+              href="https://www.fiverr.com/mohammedbakkli?up_rollout=true"
+            >
+            <img src="https://cdn.worldvectorlogo.com/logos/fiverr-1.svg" alt="Fiverr" ">
+            </a> -->
           </div>
+          
           <a hrf="#" class="btn hire_me">Hire me !</a>
           <a download target="_blank" href="" class="btn download">
             Download cv
@@ -216,7 +230,7 @@
             <h1>About me</h1>
             <h4>Hi, Im Here To Help Your Next Project</h4>
             <p>
-              I'm Mohamed from Morocco, a website programmer passionate about information security.
+              My name is <span>Mohammed.Bakkali </span> from Morocco, a website programmer passionate about information security.
               I always strive to develop safe and reliable applications and websites.
               I work as a freelancer to provide innovative and secure software solutions to my clients.
               My goal is to provide high-quality technical services that protect data and ensure privacy.
@@ -380,7 +394,7 @@
           <button data-name="HTML">HTML & CSS</button>
           <button data-name="BOOSTRAP">Tailwind and BOOSTRAP</button>
           <button data-name="JAVASCRIPT">JAVASCRIPT</button>
-          <button data-name="REACT JS">REACT JS</button>
+          <button data-name="REACT">REACT JS</button>
           <button data-name="REACT JS">NODE JS</button>
         </div>
         <div class="projects-container filterable_cards">
@@ -719,6 +733,28 @@
               <a
                 target="_blank"
                 href="https://github.com/mohammed-bakkali/Image-Slider"
+                ><i class="fa-brands fa-github"></i>Code</a
+              >
+              <a target="_blank" href="https://filters-api.netlify.app/"
+                ><i class="fa-solid fa-display"></i>LiveCode</a
+              >
+            </div>
+          </div>
+          <div class="card" data-name="REACT">
+            <img src="images/Work15.png" alt="" />
+            <h3>To Do List</h3>
+            <h5>2024</h5>
+            <p>
+              To-Do List witch Recat js
+            </p>
+            <ul>
+              <li>#React Js</li>
+              <li>#LoacalStorage</li>
+            </ul>
+            <div class="live">
+              <a
+                target="_blank"
+                href="https://github.com/mohammed-bakkali/Todo-List-Recat-js"
                 ><i class="fa-brands fa-github"></i>Code</a
               >
               <a target="_blank" href="https://filters-api.netlify.app/"

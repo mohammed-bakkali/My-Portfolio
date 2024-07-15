@@ -1,6 +1,6 @@
 /* Start Global Rules */
 .landing {
-  background: url(../images/photo-1514790193030-c89d266d5a9d.jpeg) no-repeat
+  background: url(../images/1\ AmfDWgoWHVAauIpigO8moA.jpg) no-repeat
     center center fixed;
   background-size: cover;
 }
@@ -440,7 +440,7 @@ li {
   color: var(--main-color);
   background: #12141c;
   border-radius: 50%;
-  border: 2px solid;
+  border: 1px solid;
   backdrop-filter: brightness(88%);
   font-size: 20px;
   margin-right: 17px;
@@ -455,7 +455,7 @@ li {
 
 .btn {
   display: inline-block;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15px;
   padding: 11px 26px;
   border: 2px solid var(--main-color);
@@ -474,6 +474,7 @@ li {
   background: var(--main-color);
   color: var(--text-color);
   box-shadow: 0 0 20px var(--main-color);
+  transform: scale(0.9);
 }
 
 .hire_me {
@@ -485,11 +486,12 @@ li {
 .hire_me:hover {
   box-shadow: 0 0 20px var(--main-color);
   color: var(--main-color);
-  background: transparent;
+  background: none;
+  transform: scale(0.9);
 }
 
 .landing .text i {
-  margin-right: 2px;
+  /* margin-right: 2px; */
 }
 
 .landing .go-down {
