@@ -133,6 +133,7 @@ menuBtn.onclick = () => {
   };
 };
 /*~~~~~~~~~~~~~~~ Creat popup witch The Image ~~~~~~~~~~~~~~~*/
+
 let ourGallery = document.querySelectorAll(".projects-container img");
 
 ourGallery.forEach((img) => {
