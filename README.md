@@ -1,6 +1,6 @@
 # My Portfolio
 
-A personal portfolio website showcasing my work as a Front-End Developer. This project features a responsive design and highlights my projects and experience in web development using HTML, CSS, and JavaScript, with interactive alerts and notifications powered by Alertify.js.
+A personal portfolio website showcasing my work as a Web Developer. This project features a responsive design and highlights my projects and experience in web development using HTML, CSS, and JavaScript, with interactive alerts and notifications powered by Alertify.js.
 
 ## Table of Contents
 - [Features](#features)
@@ -64,11 +64,15 @@ portfolio/
 ![Portfolio Screenshot - Mobile](./screenshots/mobile.png)
 
 ## Contact
-Feel free to reach out if you'd like to connect or collaborate!
 
-- **Email**: mohammedbakkali807@gmail.com
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
+For any questions or feedback, please reach out to:
+
+- **Name**: Mohammed Bakkali
+- **Email**: [mohammed.bakkali807@gmail.com](mailto:mohammed.bakkali807@gmail.com)
+- **Website**: [mohammed-bakkali.netlify.app](https://mohammed-bakkali.netlify.app/)
+- **Phone**: +212 722-923357
+- **City**: Tanger
+- **Role**: Web Developer
 
 ---
 
