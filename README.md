@@ -66,7 +66,7 @@ portfolio/
 
 ## Contact
 
-For any questions or feedback, please reach out to:
+For any questions or comments, please do not hesitate to contact me:
 
 - **Name**: Mohammed Bakkali
 - **Email**: [mohammed.bakkali807@gmail.com](mailto:mohammed.bakkali807@gmail.com)
