@@ -21,9 +21,10 @@ A personal portfolio website showcasing my work as a Web Developer. This project
 ## Technologies
 This portfolio was built with:
 - **HTML5**: Markup language for structuring the site.
-- **CSS3**: Styling and layout for responsive design.
+- **CSS3**: Styling and layout for responsive design(Flexbox and CSS Grid, Animations).
 - **JavaScript**: Adding interactivity and dynamic elements.
 - **Alertify.js**: Library for creating alerts and notifications.
+  
 
 ## Getting Started
 To view or edit this portfolio locally, follow these steps:
