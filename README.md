@@ -16,6 +16,7 @@ A personal portfolio website showcasing my work as a Web Developer. This project
 - **Skills Section**: Highlights technical skills and proficiency levels.
 - **Contact Form**: Allows users to send direct messages for potential job or collaboration opportunities.
 - **Interactive Alerts**: Uses Alertify.js to provide notifications and alerts for user interactions.
+- - **Certificates Section:**:  Displays certificates and achievements relevant to web development.
 
 ## Technologies
 This portfolio was built with:
@@ -29,7 +30,7 @@ To view or edit this portfolio locally, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/portfolio.git](https://github.com/mohammed-bakkali/my-Portflio.git
+   git clone https://github.com/mohammed-bakkali/my-Portflio.git
    ```
 
 2. **Navigate to the project directory**:
