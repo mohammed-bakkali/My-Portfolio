@@ -61,7 +61,7 @@ portfolio/
 ```
 
 ## Screenshots
-![Portfolio Screenshot - Desktop](./screenshots/desktop.png)
+![Portfolio Screenshot - Desktop](desktop.png)
 ![Portfolio Screenshot - Mobile](./screenshots/mobile.png)
 
 ## Contact
