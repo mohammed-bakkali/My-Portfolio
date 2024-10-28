@@ -76,5 +76,3 @@ For any questions or feedback, please reach out to:
 - **Role**: Web Developer
 
 ---
-
-Make sure to replace placeholders with your actual information and add any relevant screenshots to the `/screenshots` folder. Let me know if you need any more modifications!
