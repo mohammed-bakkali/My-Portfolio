@@ -42,14 +42,21 @@ To view or edit this portfolio locally, follow these steps:
 ## Project Structure
 ```
 portfolio/
-├── public/                 # Static files and assets
-├── src/
-│   ├── css/               # Stylesheets
-│   ├── js/                # JavaScript files (including Alertify.js)
-│   ├── images/            # Images and icons
-│   ├── index.html         # Main HTML file
-├── .gitignore
-├── README.md
+├── .vscode/               # Visual Studio Code settings
+├── css/                   # Stylesheets
+│   ├── all.min.css        # Minified CSS file
+│   ├── master.css         # Main CSS file
+│   └── normalize.css      # CSS reset file
+├── js/                    # JavaScript files
+│   └── main.js            # Main JavaScript file
+├── icons/                 # Icon files
+├── images/                # Image files
+├── webfonts/              # Web font files
+├── .hintrc                # Hint configuration file
+├── My-CV.pdf              # PDF version of your CV
+├── README.md              # This README file
+└── index.html             # Main HTML file
+
 ```
 
 ## Screenshots
