@@ -135,9 +135,12 @@ li {
 /* Start Scroll Top */
 .main-heading p {
   color: #777;
+  line-height: 35px;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
   margin-bottom: 40px;
   margin-top: 40px;
-  line-height: 1.8;
   text-align: center;
   max-width: 639px;
   margin-left: auto;
@@ -603,7 +606,6 @@ li {
   color: #777;
   line-height: 35px;
   font-size: 1rem;
-  font-family: "HCo Operator Mono";
   letter-spacing: 1px;
 }
 
@@ -698,10 +700,12 @@ li {
   color: var(--main-color);
 }
 .services .services-container .box p {
-  color: #8f8f8f;
+  color: #777;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 1px;
   line-height: 1.8;
   margin: 0;
-  font-size: 14px;
 }
 
 /* End Services */
