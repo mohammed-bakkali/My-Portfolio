@@ -1266,7 +1266,7 @@ li {
 }
 
 .contact .contact-text p {
-  color: var(--second-color);
+  color: var(--text-color);
   font-size: var(--p-font);
   line-height: 30px;
 }
