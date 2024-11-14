@@ -828,6 +828,7 @@ li {
   font-size: 1rem;
   color: #555;
   margin-bottom: 8px;
+  color: var(--main-color);
 }
 
 .certificates .card p {
