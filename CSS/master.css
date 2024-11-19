@@ -776,6 +776,15 @@ li {
 .skills .skills-container .box.linux:hover {
   box-shadow: 0 0 20px hsl(200deg 16.98% 20.78%);
 }
+.skills .skills-container .box.NEXT:hover {
+  box-shadow: 0 0 20px hsl(200deg 16.98% 20.78%);
+}
+.skills .skills-container .box.api:hover {
+  box-shadow: 0 0 20px hsl(200deg 16.98% 20.78%);
+}
+.skills .skills-container .box.exp:hover {
+  box-shadow: 0 0 20px hsl(200deg 16.98% 20.78%);
+}
 
 .skills .box h4 {
   color: var(--text-color);
