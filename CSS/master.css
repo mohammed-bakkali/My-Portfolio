@@ -431,6 +431,8 @@ li {
 
 .contact-icons {
   margin-bottom: 40px;
+  align-items: center;
+  display: flex;
 }
 
 .contact-icons i {
