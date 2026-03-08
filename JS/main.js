@@ -132,68 +132,137 @@ menuBtn.onclick = () => {
     menuBtn.classList.remove("hide");
   };
 };
-/*~~~~~~~~~~~~~~~ Creat popup witch The Image ~~~~~~~~~~~~~~~*/
 
-let ourGallery = document.querySelectorAll(".projects-container img");
+/*~~~~~~~~~~~~~~~ PROJECT IMAGE POPUP MODAL ~~~~~~~~~~~~~~~*/
+document.querySelectorAll(".projects-container .card img").forEach((img) => {
+  img.style.cursor = "zoom-in";
 
-ourGallery.forEach((img) => {
-  img.addEventListener("click", (e) => {
-    // Creat Overlay Element
-    let overlay = document.createElement("div");
+  img.addEventListener("click", () => {
+    const card     = img.closest(".card");
+    const title    = card.querySelector("h3").innerText;
+    const year     = card.querySelector("h5").innerText;
+    const desc     = card.querySelector("p").innerText;
+    const tags     = [...card.querySelectorAll("ul li")].map(li => li.innerText);
+    const codeLink = card.querySelector(".live a:first-child").href;
+    const liveLink = card.querySelector(".live a:last-child").href;
 
-    // Add Class To Overlay
+    // Overlay
+    const overlay = document.createElement("div");
     overlay.className = "popup-overlay";
-
-    // Append Overlay To The Body
     document.body.appendChild(overlay);
 
-    // Create The Popup Box
-    let popupBox = document.createElement("div");
+    // Modal
+    const modal = document.createElement("div");
+    modal.className = "popup-box";
+    modal.innerHTML = `
+      <span class="close-button">&#10005;</span>
+      <div class="popup-img-wrap">
+        <img src="${img.src}" alt="${title}" />
+      </div>
+      <div class="popup-details">
+        <h3>${title}</h3>
+        <span class="popup-year">${year}</span>
+        <p>${desc}</p>
+        <ul class="popup-tags">
+          ${tags.map(t => `<li>${t}</li>`).join("")}
+        </ul>
+        <div class="popup-links">
+          <a href="${codeLink}" target="_blank">
+            <i class="fa-brands fa-github"></i> Code
+          </a>
+          <a href="${liveLink}" target="_blank">
+            <i class="fa-solid fa-display"></i> Live Demo
+          </a>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
 
-    // Add Class To The Propup Box
-    popupBox.className = "popup-box";
+    // Animate in
+    requestAnimationFrame(() => {
+      overlay.classList.add("show");
+      modal.classList.add("show");
+    });
 
-    // Create The Image
-    let popupImage = document.createElement("img");
+    // Close
+    const closeModal = () => {
+      overlay.classList.remove("show");
+      modal.classList.remove("show");
+      setTimeout(() => { overlay.remove(); modal.remove(); }, 300);
+    };
 
-    console.log(img.src);
+    modal.querySelector(".close-button").addEventListener("click", closeModal);
+    overlay.addEventListener("click", closeModal);
 
-    // Set Image Source
-    popupImage.src = img.src;
-
-    // Add Image To Popup Bpx
-    popupBox.appendChild(popupImage);
-
-    // Append The Poup Box To Body
-    document.body.appendChild(popupBox);
-
-    // create The Close Span
-    let closeButton = document.createElement("span");
-
-    // Creat The Close Button Text
-    let closeButtonText = document.createTextNode("X");
-
-    // Append Text Close Button
-    closeButton.appendChild(closeButtonText);
-
-    // Add Class To Close Button
-    closeButton.className = "close-button";
-
-    // Add Close Button To The Popup Box
-    popupBox.appendChild(closeButton);
+    // ESC key closes modal
+    document.addEventListener("keydown", function onKey(e) {
+      if (e.key === "Escape") { closeModal(); document.removeEventListener("keydown", onKey); }
+    });
   });
 });
+/*~~~~~~~~~~~~~~~ END PROJECT IMAGE POPUP MODAL ~~~~~~~~~~~~~~~*/
+// /*~~~~~~~~~~~~~~~ Creat popup witch The Image ~~~~~~~~~~~~~~~*/
 
-//  Close Popup
-document.addEventListener("click", function (e) {
-  if (e.target.className == "close-button") {
-    // Remove The Current Popup
-    e.target.parentNode.remove();
+// let ourGallery = document.querySelectorAll(".projects-container img");
 
-    //  Remove Overlay
-    document.querySelector(".popup-overlay").remove();
-  }
-});
+// ourGallery.forEach((img) => {
+//   img.addEventListener("click", (e) => {
+//     // Creat Overlay Element
+//     let overlay = document.createElement("div");
+
+//     // Add Class To Overlay
+//     overlay.className = "popup-overlay";
+
+//     // Append Overlay To The Body
+//     document.body.appendChild(overlay);
+
+//     // Create The Popup Box
+//     let popupBox = document.createElement("div");
+
+//     // Add Class To The Propup Box
+//     popupBox.className = "popup-box";
+
+//     // Create The Image
+//     let popupImage = document.createElement("img");
+
+//     console.log(img.src);
+
+//     // Set Image Source
+//     popupImage.src = img.src;
+
+//     // Add Image To Popup Bpx
+//     popupBox.appendChild(popupImage);
+
+//     // Append The Poup Box To Body
+//     document.body.appendChild(popupBox);
+
+//     // create The Close Span
+//     let closeButton = document.createElement("span");
+
+//     // Creat The Close Button Text
+//     let closeButtonText = document.createTextNode("X");
+
+//     // Append Text Close Button
+//     closeButton.appendChild(closeButtonText);
+
+//     // Add Class To Close Button
+//     closeButton.className = "close-button";
+
+//     // Add Close Button To The Popup Box
+//     popupBox.appendChild(closeButton);
+//   });
+// });
+
+// //  Close Popup
+// document.addEventListener("click", function (e) {
+//   if (e.target.className == "close-button") {
+//     // Remove The Current Popup
+//     e.target.parentNode.remove();
+
+//     //  Remove Overlay
+//     document.querySelector(".popup-overlay").remove();
+//   }
+// });
 
 /*~~~~~~~~~~~~~~~ START SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 // Select the carousel container element
