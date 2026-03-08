@@ -133,32 +133,53 @@ menuBtn.onclick = () => {
   };
 };
 
-/*~~~~~~~~~~~~~~~ PROJECT IMAGE POPUP MODAL ~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~ PROJECT IMAGE GALLERY POPUP ~~~~~~~~~~~~~~~*/
 document.querySelectorAll(".projects-container .card img").forEach((img) => {
   img.style.cursor = "zoom-in";
 
   img.addEventListener("click", () => {
-    const card     = img.closest(".card");
-    const title    = card.querySelector("h3").innerText;
-    const year     = card.querySelector("h5").innerText;
-    const desc     = card.querySelector("p").innerText;
-    const tags     = [...card.querySelectorAll("ul li")].map(li => li.innerText);
-    const codeLink = card.querySelector(".live a:first-child").href;
-    const liveLink = card.querySelector(".live a:last-child").href;
+    const card      = img.closest(".card");
+    const title     = card.querySelector("h3").innerText;
+    const year      = card.querySelector("h5").innerText;
+    const desc      = card.querySelector("p").innerText;
+    const tags      = [...card.querySelectorAll("ul li")].map(li => li.innerText);
+    const codeLink  = card.querySelector(".live a:first-child").href;
+    const liveLink  = card.querySelector(".live a:last-child").href;
 
-    // Overlay
+    // Parse images from data-images attribute, fallback to card img
+    const rawImages = card.dataset.images || img.src;
+    const images    = rawImages.split(",").map(s => s.trim()).filter(Boolean);
+    let current     = 0;
+
+    // Build overlay
     const overlay = document.createElement("div");
     overlay.className = "popup-overlay";
     document.body.appendChild(overlay);
 
-    // Modal
+    // Build modal
     const modal = document.createElement("div");
     modal.className = "popup-box";
     modal.innerHTML = `
       <span class="close-button">&#10005;</span>
-      <div class="popup-img-wrap">
-        <img src="${img.src}" alt="${title}" />
+
+      <!-- Gallery -->
+      <div class="popup-gallery">
+        <button class="gallery-btn gallery-prev" ${images.length < 2 ? "style='display:none'" : ""}>&#8249;</button>
+        <div class="gallery-img-wrap">
+          <img class="gallery-main-img" src="${images[0]}" alt="${title}" />
+        </div>
+        <button class="gallery-btn gallery-next" ${images.length < 2 ? "style='display:none'" : ""}>&#8250;</button>
       </div>
+
+      <!-- Dots -->
+      <div class="gallery-dots">
+        ${images.map((_, i) => `<span class="gallery-dot ${i === 0 ? "active" : ""}" data-index="${i}"></span>`).join("")}
+      </div>
+
+      <!-- Counter -->
+      <div class="gallery-counter">${images.length > 1 ? `1 / ${images.length}` : ""}</div>
+
+      <!-- Details -->
       <div class="popup-details">
         <h3>${title}</h3>
         <span class="popup-year">${year}</span>
@@ -167,16 +188,61 @@ document.querySelectorAll(".projects-container .card img").forEach((img) => {
           ${tags.map(t => `<li>${t}</li>`).join("")}
         </ul>
         <div class="popup-links">
-          <a href="${codeLink}" target="_blank">
-            <i class="fa-brands fa-github"></i> Code
-          </a>
-          <a href="${liveLink}" target="_blank">
-            <i class="fa-solid fa-display"></i> Live Demo
-          </a>
+          <a href="${codeLink}" target="_blank"><i class="fa-brands fa-github"></i> Code</a>
+          <a href="${liveLink}" target="_blank"><i class="fa-solid fa-display"></i> Live Demo</a>
         </div>
       </div>
     `;
     document.body.appendChild(modal);
+
+    // --- Gallery Logic ---
+    const mainImg   = modal.querySelector(".gallery-main-img");
+    const dots      = modal.querySelectorAll(".gallery-dot");
+    const counter   = modal.querySelector(".gallery-counter");
+
+    const goTo = (index) => {
+      current = (index + images.length) % images.length;
+
+      // Fade transition
+      mainImg.style.opacity = "0";
+      setTimeout(() => {
+        mainImg.src = images[current];
+        mainImg.style.opacity = "1";
+      }, 180);
+
+      // Update dots
+      dots.forEach((d, i) => d.classList.toggle("active", i === current));
+
+      // Update counter
+      if (counter) counter.textContent = images.length > 1 ? `${current + 1} / ${images.length}` : "";
+    };
+
+    modal.querySelector(".gallery-prev").addEventListener("click", (e) => {
+      e.stopPropagation();
+      goTo(current - 1);
+    });
+
+    modal.querySelector(".gallery-next").addEventListener("click", (e) => {
+      e.stopPropagation();
+      goTo(current + 1);
+    });
+
+    dots.forEach((dot) => {
+      dot.addEventListener("click", (e) => {
+        e.stopPropagation();
+        goTo(parseInt(dot.dataset.index));
+      });
+    });
+
+    // Touch/swipe support
+    let touchStartX = 0;
+    modal.querySelector(".gallery-img-wrap").addEventListener("touchstart", (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+    modal.querySelector(".gallery-img-wrap").addEventListener("touchend", (e) => {
+      const diff = touchStartX - e.changedTouches[0].screenX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
 
     // Animate in
     requestAnimationFrame(() => {
@@ -184,7 +250,7 @@ document.querySelectorAll(".projects-container .card img").forEach((img) => {
       modal.classList.add("show");
     });
 
-    // Close
+    // Close handlers
     const closeModal = () => {
       overlay.classList.remove("show");
       modal.classList.remove("show");
@@ -192,15 +258,19 @@ document.querySelectorAll(".projects-container .card img").forEach((img) => {
     };
 
     modal.querySelector(".close-button").addEventListener("click", closeModal);
-    overlay.addEventListener("click", closeModal);
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeModal();
+    });
 
-    // ESC key closes modal
     document.addEventListener("keydown", function onKey(e) {
       if (e.key === "Escape") { closeModal(); document.removeEventListener("keydown", onKey); }
+      if (e.key === "ArrowRight") goTo(current + 1);
+      if (e.key === "ArrowLeft")  goTo(current - 1);
     });
   });
 });
-/*~~~~~~~~~~~~~~~ END PROJECT IMAGE POPUP MODAL ~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~ END PROJECT IMAGE GALLERY POPUP ~~~~~~~~~~~~~~~*/
+
 // /*~~~~~~~~~~~~~~~ Creat popup witch The Image ~~~~~~~~~~~~~~~*/
 
 // let ourGallery = document.querySelectorAll(".projects-container img");
