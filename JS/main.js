@@ -269,70 +269,7 @@ document.querySelectorAll(".projects-container .card img").forEach((img) => {
     });
   });
 });
-/*~~~~~~~~~~~~~~~ END PROJECT IMAGE GALLERY POPUP ~~~~~~~~~~~~~~~*/
 
-// /*~~~~~~~~~~~~~~~ Creat popup witch The Image ~~~~~~~~~~~~~~~*/
-
-// let ourGallery = document.querySelectorAll(".projects-container img");
-
-// ourGallery.forEach((img) => {
-//   img.addEventListener("click", (e) => {
-//     // Creat Overlay Element
-//     let overlay = document.createElement("div");
-
-//     // Add Class To Overlay
-//     overlay.className = "popup-overlay";
-
-//     // Append Overlay To The Body
-//     document.body.appendChild(overlay);
-
-//     // Create The Popup Box
-//     let popupBox = document.createElement("div");
-
-//     // Add Class To The Propup Box
-//     popupBox.className = "popup-box";
-
-//     // Create The Image
-//     let popupImage = document.createElement("img");
-
-//     console.log(img.src);
-
-//     // Set Image Source
-//     popupImage.src = img.src;
-
-//     // Add Image To Popup Bpx
-//     popupBox.appendChild(popupImage);
-
-//     // Append The Poup Box To Body
-//     document.body.appendChild(popupBox);
-
-//     // create The Close Span
-//     let closeButton = document.createElement("span");
-
-//     // Creat The Close Button Text
-//     let closeButtonText = document.createTextNode("X");
-
-//     // Append Text Close Button
-//     closeButton.appendChild(closeButtonText);
-
-//     // Add Class To Close Button
-//     closeButton.className = "close-button";
-
-//     // Add Close Button To The Popup Box
-//     popupBox.appendChild(closeButton);
-//   });
-// });
-
-// //  Close Popup
-// document.addEventListener("click", function (e) {
-//   if (e.target.className == "close-button") {
-//     // Remove The Current Popup
-//     e.target.parentNode.remove();
-
-//     //  Remove Overlay
-//     document.querySelector(".popup-overlay").remove();
-//   }
-// });
 
 /*~~~~~~~~~~~~~~~ START SLAIDER REVIEWS ~~~~~~~~~~~~~~~*/
 // Select the carousel container element

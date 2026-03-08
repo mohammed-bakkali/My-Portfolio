@@ -943,6 +943,8 @@ li {
 
 .projects .card ul {
   display: flex;
+  flex-wrap: wrap;   
+  gap: 6px;
   margin-bottom: 40px;
 }
 
