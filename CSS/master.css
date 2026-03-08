@@ -919,6 +919,9 @@ li {
 
 .projects .card img {
   width: 100%;
+  height: 200px;          /* ← add this */
+  object-fit: cover;      /* ← add this */
+  border-radius: 6px;     /* ← optional, looks nicer */
 }
 
 .projects .card h3 {
@@ -986,6 +989,7 @@ li {
 .projects .card .live a:first-child:hover {
   background-color: transparent;
 }
+
 /* ===== PROJECT GALLERY POPUP ===== */
 .popup-overlay {
   position: fixed;
